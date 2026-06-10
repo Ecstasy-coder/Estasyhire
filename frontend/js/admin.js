@@ -4,7 +4,7 @@ const resultsTableBody = document.getElementById("resultsTableBody");
 const statusText = document.getElementById("statusText");
 
 if (!token || role !== "admin") {
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }
 
 async function loadAdminData() {
@@ -150,7 +150,7 @@ loadAdminData();
 document.getElementById("logoutBtn").addEventListener("click", () => {
   localStorage.removeItem("token");
   localStorage.removeItem("role");
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 });
 
 document.getElementById("exportBtn").addEventListener("click", downloadCsv);
