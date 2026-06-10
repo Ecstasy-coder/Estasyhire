@@ -2,7 +2,7 @@ const token =
 localStorage.getItem("token");
 
 if(!token){
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 window.history.pushState(null, "", window.location.href);
@@ -287,7 +287,7 @@ async function fetchQuestions(){
         localStorage.setItem("testCompleted", String(Boolean(profile.testCompleted)));
         const response =
         await fetch(
-        "http://localhost:5080/api/exam/start",
+        "https://estasyhire.onrender.com/api/exam/start",
         {
             headers:{
                 Authorization:
