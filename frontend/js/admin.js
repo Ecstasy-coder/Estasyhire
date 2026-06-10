@@ -10,16 +10,16 @@ if (!token || role !== "admin") {
 async function loadAdminData() {
   try {
     const [dashboardResponse, resultsResponse, violationsResponse, usersResponse] = await Promise.all([
-      fetch("http://localhost:5080/api/admin/dashboard", {
+      fetch("https://estasyhire.onrender.com/api/admin/dashboard", {
         headers: { Authorization: "Bearer " + token }
       }),
-      fetch("http://localhost:5080/api/admin/results", {
+      fetch("https://estasyhire.onrender.com/api/admin/results", {
         headers: { Authorization: "Bearer " + token }
       }),
-      fetch("http://localhost:5080/api/admin/violations", {
+      fetch("https://estasyhire.onrender.com/api/admin/violations", {
         headers: { Authorization: "Bearer " + token }
       }),
-      fetch("http://localhost:5080/api/admin/users", {
+      fetch("https://estasyhire.onrender.com/api/admin/users", {
         headers: { Authorization: "Bearer " + token }
       })
     ]);
@@ -96,7 +96,7 @@ async function loadAdminData() {
 
 async function downloadCandidateAnswers(userId) {
   try {
-    const response = await fetch(`http://localhost:5080/api/admin/results/export/${userId}`, {
+    const response = await fetch(`https://estasyhire.onrender.com/api/admin/results/export/${userId}`, {
       headers: { Authorization: "Bearer " + token }
     });
 
