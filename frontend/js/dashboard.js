@@ -17,7 +17,7 @@ async function initDashboard() {
   }
 
   try {
-    const response = await fetch("http://localhost:5080/api/auth/profile", {
+    const response = await fetch("https://estasyhire.onrender.com/api/auth/profile", {
       headers: {
         Authorization: "Bearer " + token
       }
