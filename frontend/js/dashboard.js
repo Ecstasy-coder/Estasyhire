@@ -3,7 +3,7 @@ async function initDashboard() {
   const role = localStorage.getItem("role");
 
   if (!token) {
-    window.location.href = "login.html";
+    window.location.href = "index.html";
     return;
   }
 
@@ -54,7 +54,7 @@ async function initDashboard() {
       logoutBtn.addEventListener("click", () => {
         localStorage.clear();
         sessionStorage.clear();
-        window.location.href = "login.html";
+        window.location.href = "index.html";
       });
     }
 
@@ -100,5 +100,5 @@ document.addEventListener("click", (event) => {
   event.preventDefault();
   localStorage.clear();
   sessionStorage.clear();
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 });
